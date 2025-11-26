@@ -37,19 +37,19 @@ Netrics is itself a distribution of https://github.com/chicago-cdac/fate[Fate], 
 
 == Demo
 
-Not quite ready to dive in? Check out our https://github.com/internet-equity/netrics-docker[guide in the netrics-demo repository].
+Not quite ready to dive in? Check out our https://github.com/internet-innovation/netrics-docker[guide in the netrics-demo repository].
 
 == Installation
 
 === Docker images
 
-Netrics publishes a number of https://github.com/internet-equity/netrics/pkgs/container/netrics[Debian-based Docker images], for the ease of users familiar with Docker, to support otherwise unsupported systems, and otherwise to provision Netrics in systems utilizing containers.
+Netrics publishes a number of https://github.com/internet-innovation/netrics/pkgs/container/netrics[Debian-based Docker images], for the ease of users familiar with Docker, to support otherwise unsupported systems, and otherwise to provision Netrics in systems utilizing containers.
 
 For example, to get started with the default Netrics Docker image:
 
 [source,sh]
 ----
-docker run ghcr.io/internet-equity/netrics
+docker run ghcr.io/internet-innovation/netrics
 ----
 
 === Package managers
@@ -66,14 +66,14 @@ The one-liner below will install Netrics for the current user:
 
 [source,sh]
 ----
-curl -sL https://github.com/internet-equity/netrics/raw/0.0.1/install.py | python3
+curl -sL https://github.com/internet-innovation/netrics/raw/0.0.1/install.py | python3
 ----
 
 To install Netrics system-wide you might use `sudo`:
 
 [source,sh]
 ----
-curl -sL https://github.com/internet-equity/netrics/raw/0.0.1/install.py | sudo python3
+curl -sL https://github.com/internet-innovation/netrics/raw/0.0.1/install.py | sudo python3
 ----
 
 [TIP]
@@ -82,7 +82,7 @@ You may pass arguments to the installer – even in the above form – separated
 
 [source,sh]
 ----
-curl -sL https://github.com/internet-equity/netrics/raw/0.0.1/install.py | python3 - --help
+curl -sL https://github.com/internet-innovation/netrics/raw/0.0.1/install.py | python3 - --help
 ----
 
 And, for example, if the installer cannot find a suitable location for the Netrics executables – one which is both writeable by the current user and on the `PATH` of the current user – then specification of the installation path argument is **required**.
@@ -92,7 +92,7 @@ Alternatively, download the installer to interact with it:
 
 [source,sh]
 ----
-curl -LO https://github.com/internet-equity/netrics/raw/0.0.1/install.py
+curl -LO https://github.com/internet-innovation/netrics/raw/0.0.1/install.py
 
 python3 install.py --help
 ----
@@ -110,7 +110,7 @@ ls -1 /usr/bin/python3.*
 
 Python installed? Great. That's all the pre-built bundle needs.
 
-Find the appropriate build for your system on the https://github.com/internet-equity/netrics/releases/latest[Netrics release announcement page].
+Find the appropriate build for your system on the https://github.com/internet-innovation/netrics/releases/latest[Netrics release announcement page].
 
 For example, the below package includes the Netrics software bundle version `0.0.1`, and all its CLI commands, pre-built for the ARM CPU architecture (`aarch64`) and Python version 3.8 (`py38`):
 
@@ -140,9 +140,9 @@ ARCH=$(arch)
 
 PYTHON=py$(python3 -c "import sys; print(*sys.version_info[:2], sep='')")
 
-NETRICS=$(curl -s https://api.github.com/repos/internet-equity/netrics/releases/latest | jq -r .tag_name)
+NETRICS=$(curl -s https://api.github.com/repos/internet-innovation/netrics/releases/latest | jq -r .tag_name)
 
-curl -sL https://github.com/internet-equity/netrics/releases/download/$NETRICS/netrics-all-$NETRICS-$PYTHON-$ARCH.tar | sudo tar -xf - -C /usr/local/bin/
+curl -sL https://github.com/internet-innovation/netrics/releases/download/$NETRICS/netrics-all-$NETRICS-$PYTHON-$ARCH.tar | sudo tar -xf - -C /usr/local/bin/
 ----
 
 …But, why not use the <<One-line installer,one-line installer>>, instead?

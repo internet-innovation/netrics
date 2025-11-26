@@ -27,13 +27,13 @@ INSTALL_PATHS = (
 
 PYVERSION_RANGE = (8, 11)
 
-RELEASES_URL = f'https://api.github.com/repos/internet-equity/{APP_NAME}/releases'
+RELEASES_URL = f'https://api.github.com/repos/internet-innovation/{APP_NAME}/releases'
 
 LATEST_RELEASE_URL = RELEASES_URL + '/latest'
 
 LATEST_RELEASE_PRE_URL = RELEASES_URL + '?per_page=1'
 
-DOWNLOAD_URL = (f'https://github.com/internet-equity/{APP_NAME}/releases/download'
+DOWNLOAD_URL = (f'https://github.com/internet-innovation/{APP_NAME}/releases/download'
                 f'/{{APP_VERSION}}/{APP_NAME}-all-{{APP_VERSION}}-py{{PY_VERSION}}-{{ARCH}}.tar')
 
 

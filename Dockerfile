@@ -9,7 +9,7 @@ ARG NDT_BUILDER_VERSION=1.18
 
 # build 1: set app in builder
 ARG APP_NAME=netrics
-ARG ORG_NAME=internet-equity
+ARG ORG_NAME=internet-innovation
 
 # build 1: specification of builder version
 ARG BUILDER_VERSION=latest
@@ -60,7 +60,7 @@ NDT7-BUILD
 # build 1: netrics
 #
 
-FROM ghcr.io/internet-equity/fate-builder:${BUILDER_VERSION}
+FROM ghcr.io/internet-innovation/fate-builder:${BUILDER_VERSION}
 
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked <<PKG-INSTALL

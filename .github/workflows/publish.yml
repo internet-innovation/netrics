@@ -39,7 +39,7 @@ on:
 #
 # jobs:
 #   delegate:
-#     uses: internet-equity/fate/.github/workflows/publish.yml@1.0.0
+#     uses: internet-innovation/fate/.github/workflows/publish.yml@1.0.0
 #     permissions:
 #       contents: write
 #       id-token: write
